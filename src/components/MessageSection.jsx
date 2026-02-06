@@ -1,6 +1,6 @@
-﻿import herOne from "../assets/images/her-1.jpg";
-import herTwo from "../assets/images/her-2.jpg";
-import herThree from "../assets/images/her-3.jpg";
+﻿import herSix from "../assets/images/her-6.jpg";
+import herSeven from "../assets/images/her-7.jpg";
+import herEight from "../assets/images/her-8.jpg";
 
 const MessageSection = () => {
   return (
@@ -37,17 +37,17 @@ Aaj bhi… aur hamesha bhi.
 
             <div className="grid grid-cols-3 gap-3 sm:gap-4">
               <img
-                src={herOne}
+                src={herSix}
                 alt="Sweet memory one"
                 className="h-24 w-full rounded-2xl object-cover shadow-soft sm:h-28"
               />
               <img
-                src={herTwo}
+                src={herSeven}
                 alt="Sweet memory two"
                 className="h-24 w-full rounded-2xl object-cover shadow-soft sm:h-28"
               />
               <img
-                src={herThree}
+                src={herEight}
                 alt="Sweet memory three"
                 className="h-24 w-full rounded-2xl object-cover shadow-soft sm:h-28"
               />

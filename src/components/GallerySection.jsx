@@ -6,21 +6,21 @@ import herFive from "../assets/images/her-5.jpg";
 
 const GallerySection = () => {
   const images = [
-    { src: herOne, alt: "Her smile", title: "Her Smile" },
+    { src: herOne, alt: "Her smile", title: "Her Smile", aspect: "aspect-[16/9]" },
     { src: herTwo, alt: "Her laughter", title: "Her Laughter" },
-    { src: herThree, alt: "Her gentle glance", title: "Her Glance" },
+    { src: herThree, alt: "Her gentle glance", title: "Her Glance", aspect: "aspect-[16/9]" },
     { src: herFour, alt: "Her warm presence", title: "Her Presence" },
-    { src: herFive, alt: "Her soft charm", title: "Her Charm" }
+    { src: herFive, alt: "Her soft charm", title: "Her Charm", aspect: "aspect-[16/9]" }
   ];
 
   const videos = [
-    { src: "/videos/love-1.mp4", title: "Morning hello" },
-    { src: "/videos/love-2.mp4", title: "Late night laugh" },
-    { src: "/videos/love-3.mp4", title: "A sweet message" },
-    { src: "/videos/love-4.mp4", title: "Our tiny rituals" },
-    { src: "/videos/love-5.mp4", title: "A day together" },
-    { src: "/videos/love-6.mp4", title: "Missing you" },
-    { src: "/videos/love-7.mp4", title: "Always us" }
+    { src: "/videos/love-1.mp4", title: "💘" },
+    { src: "/videos/love-2.mp4", title: "💞" },
+    { src: "/videos/love-3.mp4", title: "😻" },
+    { src: "/videos/love-4.mp4", title: "❤️‍🩹" },
+    { src: "/videos/love-5.mp4", title: "💖" },
+    { src: "/videos/love-5.mp4", title: "♥" },
+    { src: "/videos/love-6.mp4", title: "❣" }
   ];
 
   return (
@@ -35,13 +35,15 @@ const GallerySection = () => {
           {images.map((image) => (
             <div
               key={image.alt}
-              className="group relative overflow-hidden rounded-2xl bg-rose-50 shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_28px_40px_-28px_rgba(190,18,60,0.55)] sm:rounded-3xl"
+              className="group relative overflow-hidden rounded-2xl bg-rose-50 shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_45px_-28px_rgba(190,18,60,0.55)] sm:rounded-3xl"
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-[1.04] sm:h-48 md:h-52"
-              />
+              <div className={`${image.aspect ?? "aspect-[3/4]"} w-full`}>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[0.98]"
+                />
+              </div>
               <div className="absolute bottom-3 left-3 rounded-2xl bg-rose-500 px-3 py-1.5 text-xs font-semibold text-white shadow-md sm:px-4 sm:py-2 sm:text-sm">
                 {image.title}
               </div>
@@ -73,7 +75,7 @@ const GallerySection = () => {
                   />
                 </div>
                 <div className="px-4 py-3">
-                  <p className="text-sm font-medium text-rose-700">{video.title}</p>
+                  <p className="text-base font-semibold text-rose-700 sm:text-lg">{video.title}</p>
                 </div>
               </div>
             ))}
