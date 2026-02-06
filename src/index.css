@@ -1,0 +1,17 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-serif text-rose-900 bg-rose-50 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+  }
+}
